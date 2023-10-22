@@ -37,15 +37,18 @@ export default function Home() {
   const visibleItems = filterItems(items, searchTerm, activeCategory); // Filter by search term and category
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 flex flex-col justify-center min-h-screen">
       <Head>
         <title>Understanding Syntax</title>
       </Head>
 
-      <SearchBar onSearch={handleSearch} />
-      <CategoryFilter onCategoryChange={handleCategoryChange} />
+      <div className="flex flex-col items-center justify-center my-4">
+    <SearchBar onSearch={handleSearch} />
+    <CategoryFilter onCategoryChange={handleCategoryChange} />
+</div>
 
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
         {visibleItems.map((item, index) => (
           <Card
             key={index}

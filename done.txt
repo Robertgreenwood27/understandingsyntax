@@ -1,0 +1,19 @@
+Data Types
+title: "Number", category: "Data Types"
+title: "String", category: "Data Types"
+title: "Boolean", category: "Data Types"
+title: "Array", category: "Data Types"
+Control Structures
+title: "If-Else Statement", category: "Control Structures"
+title: "Switch Statement", category: "Control Structures"
+title: "If Statement", category: "Control Structures"
+Loops and Iteration
+title: "For Loop", category: "Loops and Iteration"
+title: "While Loop", category: "Loops and Iteration"
+title: "For...Of Loop", category: "Loops and Iteration"
+Functions
+title: "Function Declaration", category: "Functions"
+title: "Arrow Function", category: "Functions"
+Objects and Prototypes
+title: "Object Literals", category: "Objects and Prototypes"
+title: "Prototypes", category: "Objects and Prototypes"

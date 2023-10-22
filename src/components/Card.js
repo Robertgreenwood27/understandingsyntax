@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import ReactCardFlip from 'react-card-flip';
 
 const Card = ({ title, code, description, realLifeExample }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -7,26 +8,45 @@ const Card = ({ title, code, description, realLifeExample }) => {
     setIsFlipped(!isFlipped);
   };
 
+  const cardStyle = {
+    height: '300px', // Set a fixed height
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundImage: 'url("/background.png")', // Set background image
+    backgroundSize: 'cover', // Cover the entire card
+    color: 'black' // Set text color to black
+  };
+
   return (
-    <div 
-      className="w-full md:w-64 m-4 p-4 border rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 ease-in-out hover:shadow-xl" 
-      onClick={handleClick} 
-      style={{ minHeight: '200px' }}
-    >
-      {isFlipped ? (
-        <div className="text-center">
-          <h2 className="text-xl font-bold mb-2">Code Example:</h2> {/* Clearer label */}
-          <p className="text-left font-mono text-sm p-2 rounded">{code}</p> {/* Styled for code readability */}
-          <p className="mt-2 text-sm italic">flip</p>
-        </div>
-      ) : (
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+      {/* Front of the card */}
+      <div 
+        className="w-full md:w-64 m-4 p-4 border rounded-lg shadow-lg cursor-pointer"
+        style={cardStyle}
+        onClick={handleClick}
+      >
         <div className="text-center">
           <h2 className="text-xl font-bold mb-2">{title}</h2>
-          <p><strong>Description:</strong> {description}</p> {/* Clearer label */}
-          <p className="text-sm italic"><strong>Real-life Example:</strong> {realLifeExample}</p> {/* Clearer label and italicized for emphasis */}
+          <p><strong>Description:</strong> {description}</p>
+          <p className="text-sm italic"><strong>Real-life Example:</strong> {realLifeExample}</p>
         </div>
-      )}
-    </div>
+      </div>
+
+      {/* Back of the card */}
+      <div 
+        className="w-full md:w-64 m-4 p-4 border rounded-lg shadow-lg cursor-pointer"
+        style={cardStyle}
+        onClick={handleClick}
+      >
+        <div className="text-center">
+          <h2 className="text-xl font-bold mb-2">Code Example:</h2>
+          <p className="text-left font-mono text-sm p-2 rounded">{code}</p>
+          <p className="mt-2 text-sm italic">flip</p>
+        </div>
+      </div>
+    </ReactCardFlip>
   );
 };
 
