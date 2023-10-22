@@ -43,13 +43,6 @@ const items = [
         category: "Loops and Iteration"
       },
       {
-        title: "While Loop",
-        code: "let i = 0; while (i < 5) { console.log(i); i++; }",
-        description: "The 'while' loop repeats through a block of code as long as a specified condition evaluates to true.",
-        realLifeExample: "Like reading a book page by page until the end.",
-        category: "Loops and Iteration"
-      },
-      {
         title: "For...Of Loop",
         code: "for (const element of [1, 2, 3]) { console.log(element); }",
         description: "Iterates over iterable objects like arrays, strings, etc.",
@@ -85,32 +78,11 @@ const items = [
         category: "Objects and Prototypes"
       },
     {
-      title: "For Loop",
-      code: "for (let i = 0; i < 5; i++) { console.log(i); }",
-      description: "A 'for' loop repeats until a specified condition evaluates to false.",
-      realLifeExample: "Imagine you have to fill individual bags with five apples each...",
-      category: "Loops and Iteration"
-    },
-    {
       title: "While Loop",
       code: "let i = 0; while (i < 5) { console.log(i); i++; }",
       description: "A 'while' loop continues as long as a specified condition is true.",
       realLifeExample: "Imagine you're eating popcorn and continue eating until the bowl is empty...",
       category: "Loops and Iteration"
-    },
-    {
-      title: "If Statement",
-      code: "if (x > 10) { console.log('x is greater than 10'); }",
-      description: "An 'if' statement executes a statement if a specified condition is truthy.",
-      realLifeExample: "If it's raining, you'll take an umbrella with you...",
-      category: "Control Structures"
-    },
-    {
-      title: "Function Declaration",
-      code: "function greet(name) { return `Hello, ${name}!`; }",
-      description: "A function declaration defines a function and its body.",
-      realLifeExample: "Imagine a simple machine where you input coffee beans and get a cup of coffee...",
-      category: "Functions"
     },
     {
       title: "Array",
